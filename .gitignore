@@ -1,0 +1,9 @@
+/target/
+
+/.classpath
+
+/bin/
+
+/test-output/
+
+/.settings/
