@@ -7,10 +7,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		
+		tags = "@api and not @db",
 		features = "src/test/resources/com/automationpractice/features",
-		glue = "com/automationpractice/stepDefs"
-		
+		glue = "com/automationpractice/stepDefs",
+		plugin = {"summary", "pretty"}, // summary -> generate unimplemented step definitions in console
+										// pretty -> more detailed output
+		monochrome = true // fixes the ? on the console for windows users
+//		,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
 		
 		
 		)

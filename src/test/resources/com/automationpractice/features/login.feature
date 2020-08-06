@@ -1,22 +1,20 @@
-
-
 Feature: Login feature
-As a customer, I want to be able to login using login page
+  As a customer, I want to be able to login using login page
 
+  Background: 
+    Given I am on homepage
+    When I click on sign in button
 
+  @smoke @login @db
+  Scenario: Verify login page title #Title
+    As a user, I should be able to land on login page #Description
 
-	Scenario: Verify login page title
-		
-		
-		Given I am on homepage
-		When I click on sign in button
-		Then I should land on login page and the title should be Login - My store
+    Then I should land on login page and the title should be Login - My store
 
+  @smoke @db @ABC-123
+  Scenario: Verify login page url
+    Then I should land on login page and the url should be correct
 
-
-Scenario: Verify login page url
-		
-		
-		Given I am on homepage
-		When I click on sign in button
-		Then I should land on login page and the url should be correct
+  @api
+  Scenario: Verify login page elements
+    Then The username, password and login button elements should be enabled

@@ -8,12 +8,23 @@ import com.automationpractice.utilities.Driver;
 
 public class LoginPage {
 	
+	
+
 	public LoginPage() {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
 	
-//	@FindBy (xpath = "//a[@title='Log in to your customer account']")
-//	public WebElement signInButton;
+	@FindBy (xpath = "//a[@title='Log in to your customer account']")
+	public WebElement signInButton;
+	
+	@FindBy (id = "email")
+	public WebElement usernameField;
+	
+	@FindBy (id = "passwd")
+	public WebElement passwordField;
+	
+	@FindBy (id = "SubmitLogin")
+	public WebElement loginButton;
 
 }

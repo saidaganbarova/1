@@ -18,8 +18,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class LoginStepDefinitions {
 	
 	
-	@Given("I am on homepage")
-	public void i_am_on_homepage() {
+	@When("I am on homepage")
+	public void i() {
 		
 		
 		Driver.getDriver().manage().timeouts().
@@ -54,7 +54,7 @@ public class LoginStepDefinitions {
 	public void i_should_land_on_login_page_and_the_title_should_be_login_my_store() {
 		String title = Driver.getDriver().getTitle();
 		Assert.assertEquals("Login - My Store", title);
-
+		  Driver.quit();
 	}
 	
 	
@@ -62,7 +62,20 @@ public class LoginStepDefinitions {
 	public void i_should_land_on_login_page_and_the_url_should_be_correct() {
 		String url = Driver.getDriver().getCurrentUrl();
 		Assert.assertEquals("http://automationpractice.com/index.php?controller=authentication&back=my-account", url);
-
+		  Driver.quit();
+	}
+	
+	
+	@Then("The username, password and login button elements should be enabled")
+	public void the_username_password_and_login_button_elements_should_be_enabled() {
+	    LoginPage lp= new LoginPage();
+	    
+	    Assert.assertTrue(lp.usernameField.isEnabled());
+	    Assert.assertTrue(lp.passwordField.isEnabled());
+	    Assert.assertTrue(lp.loginButton.isEnabled());
+	    
+	    Driver.quit();
+		
 	}
 	
 
