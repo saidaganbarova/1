@@ -20,6 +20,12 @@ public class ProductPage {
 
 	@FindBy (id = "our_price_display")
 	public WebElement price;
+
+	@FindBy (className =  "icon-plus")
+	public WebElement plusButton;
+	
+	@FindBy (className =  "icon-minus")
+	public WebElement minusButton;
 	
 	
 

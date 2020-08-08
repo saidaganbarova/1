@@ -5,16 +5,16 @@ Feature: Login feature
     Given I am on homepage
     When I click on sign in button
 
-  @smoke @login @db
+  @smoke
   Scenario: Verify login page title #Title
     As a user, I should be able to land on login page #Description
 
     Then I should land on login page and the title should be Login - My store
 
-  @smoke @db @ABC-123
+  @smoke 
   Scenario: Verify login page url
     Then I should land on login page and the url should be correct
 
-  @api
+  @smoke
   Scenario: Verify login page elements
     Then The username, password and login button elements should be enabled

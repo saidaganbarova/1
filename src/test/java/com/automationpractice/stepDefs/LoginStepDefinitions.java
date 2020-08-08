@@ -22,9 +22,7 @@ public class LoginStepDefinitions {
 	public void i() {
 		
 		
-		Driver.getDriver().manage().timeouts().
-		implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitWait")), TimeUnit.SECONDS);
-		Driver.getDriver().manage().window().maximize();
+		
 		Driver.getDriver().get(ConfigReader.getProperty("url"));
 
 
@@ -54,7 +52,7 @@ public class LoginStepDefinitions {
 	public void i_should_land_on_login_page_and_the_title_should_be_login_my_store() {
 		String title = Driver.getDriver().getTitle();
 		Assert.assertEquals("Login - My Store", title);
-		  Driver.quit();
+		 
 	}
 	
 	
@@ -62,7 +60,7 @@ public class LoginStepDefinitions {
 	public void i_should_land_on_login_page_and_the_url_should_be_correct() {
 		String url = Driver.getDriver().getCurrentUrl();
 		Assert.assertEquals("http://automationpractice.com/index.php?controller=authentication&back=my-account", url);
-		  Driver.quit();
+		 
 	}
 	
 	
@@ -74,7 +72,7 @@ public class LoginStepDefinitions {
 	    Assert.assertTrue(lp.passwordField.isEnabled());
 	    Assert.assertTrue(lp.loginButton.isEnabled());
 	    
-	    Driver.quit();
+	  
 		
 	}
 	
