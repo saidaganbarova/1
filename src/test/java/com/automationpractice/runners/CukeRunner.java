@@ -10,12 +10,13 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		tags = "@temp",
+		
 		features = "src/test/resources/com/automationpractice/features",
 		glue = "com/automationpractice/stepDefs",
 		plugin = {"summary", 
-				"pretty",
+				 "pretty",
 				 "html:target/builtInReport",
-				 "json:target/Cucumber.json"
+				 "json:target/Cucumber.json" // needed for pretty report
 		
 		}, // summary -> generate unimplemented step definitions in console
 										// pretty -> more detailed output

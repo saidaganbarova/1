@@ -1,4 +1,4 @@
-@temp
+
 Feature: Verify product information
 
   Scenario: Verify product name

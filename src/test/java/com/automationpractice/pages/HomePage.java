@@ -23,6 +23,10 @@ public class HomePage {
 	
 	@FindBy (xpath = "(//a[contains( text(), 'Blouse')])[2]")
 	public WebElement product;
+
+
+	@FindBy (xpath = "(//a[@title='Dresses'])[2]")
+	public WebElement dressButton;
 	
 	
 	public void clickOnProduct(String product) {
