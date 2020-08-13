@@ -3,6 +3,7 @@ package com.automationpractice.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.automationpractice.utilities.Driver;
 
@@ -26,6 +27,19 @@ public class ProductPage {
 	
 	@FindBy (className =  "icon-minus")
 	public WebElement minusButton;
+
+	@FindBy (id =  "group_1")
+	public WebElement size;
+
+	@FindBy (xpath =  "//p[@id='product_condition']//span")
+	public WebElement condition;
+
+	@FindBy (xpath =  "//p[@id='product_reference']//span")
+	public WebElement  model;
+	
+	public WebElement returnFirstSelectedOption() {
+		return new Select(size).getFirstSelectedOption();
+	}
 	
 	
 

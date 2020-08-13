@@ -23,7 +23,7 @@ Feature: Verify product information
     Then The product quantity should be 67 and the product price should be 16.51
     
     
-    
+   @plusminus 
   Scenario: Verify plus minus buttons
     Given I am on homepage
     When I click on 'Faded Short Sleeve T-shirt'
@@ -31,5 +31,25 @@ Feature: Verify product information
     Then The quantity should be correct
     When I click on minus button 2 times
     Then The quantity should be correct
+    
+   
+    Scenario: Verify product details
+    Given I am on homepage
+    When I click on "Faded Short Sleeve T-shirts"
+    Then The product details should be the following
+    
+    	| Product name 							 | Model  | Condition | Price | Quantity | Size |
+    	| Faded Short Sleeve T-shirts| demo_1 | New       | 16.51 | 1        |  S   |
+    	
+    	
+    @temp
+    Scenario: Verify product details using cucumber custom type
+    Given I am on homepage
+    When I click on "Faded Short Sleeve T-shirts"
+    Then The product details should be the following using custom type
+    
+    	| Product name 							 | Model  | Condition | Price | Quantity | Size | 
+    	| Faded Short Sleeve T-shirts| demo_1 | New       | 16.51 | 1        |  S   |
+    	
     
     

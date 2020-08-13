@@ -32,5 +32,24 @@ public class DressStylesStepDefs {
 		
 		
 	}
+	
+	@Then("The following sizes should be there")
+	public void theFollowingSizesShouldBeThere(List<String> expected) {
+
+		List<String> actual = BrowserUtilities.getElementsText(new DressesPage().sizes);
+		
+		for (int i = 0; i < actual.size(); i++) {
+			
+			Assert.assertEquals(expected.get(i), actual.get(i).substring(0,1));
+			
+		}
+		
+
+
+		
+
+	}
+	
+	
 
 }

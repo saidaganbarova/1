@@ -18,7 +18,10 @@ public class DressesPage {
 	@FindBy (xpath = "//div[@id='subcategories']//h5//a")
 	public List<WebElement> subcategories;
 	
+	@FindBy (xpath = "//ul[@id='ul_layered_id_attribute_group_1']//a")
+	public List<WebElement>  sizes;
 	
-	//div[@id='subcategories']//h5//a
+	
+	
 
 }
