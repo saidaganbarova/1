@@ -18,3 +18,25 @@ Feature: Login feature
   @smoke
   Scenario: Verify login page elements
     Then The username, password and login button elements should be enabled
+    
+   
+   Scenario: Verify login using multiple credentials
+   
+   And I enter "duotech@gmail.com" to email field
+   And I enter "dt123" to password field
+   Then I should be able to login and name should be "Duotech Academy"
+   
+    @temp 
+   Scenario Outline: Verify login using multiple credentials  using SO
+   
+   And I enter "<email>" to email field
+   And I enter "<password>" to password field
+   Then I should be able to login and name should be "<name>"
+   
+   Examples:
+   			| email             | password | name            |
+   			| duotech@gmail.com | dt123    | Duotech Academy |
+   			| duotech1@gmail.com| duotech1 | Duotech One     |
+   			| duotech2@gmail.com| duotech2 | Duotech Two     |
+   			 
+

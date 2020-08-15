@@ -6,6 +6,7 @@ import org.junit.Assert;
 
 import com.automationpractice.pages.HomePage;
 import com.automationpractice.pages.LoginPage;
+import com.automationpractice.pages.MyAccountPage;
 import com.automationpractice.utilities.ConfigReader;
 import com.automationpractice.utilities.Driver;
 
@@ -74,6 +75,25 @@ public class LoginStepDefinitions {
 	    
 	  
 		
+	}
+	
+	
+	
+	@When("I enter {string} to email field")
+	public void iEnterToEmailField(String email) {
+	   new LoginPage().usernameField.sendKeys(email);
+	}
+
+	@When("I enter {string} to password field")
+	public void iEnterToPasswordField(String pass) {
+		 new LoginPage().passwordField.sendKeys(pass);
+		 new LoginPage().loginButton.click();
+	}
+
+	@Then("I should be able to login and name should be {string}")
+	public void iShouldBeAbleToLogin(String name) {
+	    
+		Assert.assertEquals(name, new MyAccountPage().customerNameLink.getText());
 	}
 	
 

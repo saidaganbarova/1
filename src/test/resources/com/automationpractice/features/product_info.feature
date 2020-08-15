@@ -42,7 +42,7 @@ Feature: Verify product information
     	| Faded Short Sleeve T-shirts| demo_1 | New       | 16.51 | 1        |  S   |
     	
     	
-    @temp
+  
     Scenario: Verify product details using cucumber custom type
     Given I am on homepage
     When I click on "Faded Short Sleeve T-shirts"
