@@ -138,6 +138,22 @@ public class ProductInfoStepDefinitions {
 		Assert.assertEquals(product.getQuantity(), actualQuantity);
 		
 	}
+	
+	
+	@Then("The product name should be {string}")
+	public void theProductNameShouldBe(String expected) {
+	    String actual =  new ProductPage().product.getText();
+	    
+	    Assert.assertEquals(expected, actual);
+	}
+
+	@Then("The product price should be {double}")
+	public void theProductPriceShouldBe(Double expected) {
+	    
+		Double actual = Double.valueOf(new ProductPage().price.getText().replace("$", ""));
+		Assert.assertEquals(expected, actual);
+	}
+
 
 
 }

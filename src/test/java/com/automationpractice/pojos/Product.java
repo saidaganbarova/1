@@ -1,5 +1,7 @@
 package com.automationpractice.pojos;
 
+import com.github.javafaker.Faker;
+
 public class Product {
 	
 	
@@ -82,6 +84,14 @@ public class Product {
 
 	public void setModel(String model) {
 		this.model = model;
+	}
+	
+	
+	public static void main(String[] args) {
+		for (int i = 0; i < 15; i++) {
+			System.out.println(new Faker().address().city());
+		}
+		
 	}
 	
 	

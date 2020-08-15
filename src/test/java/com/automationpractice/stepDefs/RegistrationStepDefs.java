@@ -3,6 +3,7 @@ package com.automationpractice.stepDefs;
 import java.util.List;
 
 import org.junit.Assert;
+import org.openqa.selenium.NoSuchElementException;
 
 import com.automationpractice.pages.CreateAccountPage;
 import com.automationpractice.pages.LoginPage;
@@ -25,9 +26,9 @@ public class RegistrationStepDefs {
 	}
 
 	@Then("I should be able to register with the following details")
-	public void iShouldBeAbleToRegisterWithTheFollowingDetails(List<User> users) {
+	public void iShouldBeAbleToRegisterWithTheFollowingDetails(User user) {
 		
-		User user = users.get(0);
+		
 		
 		CreateAccountPage ca = new CreateAccountPage();
 		ca.firstName.sendKeys(user.getFirstName());
@@ -43,8 +44,16 @@ public class RegistrationStepDefs {
 		
 		
 		String expected = user.getFirstName() + " " + user.getLastName();
-		String actual = new MyAccountPage().customerNameLink.getText();
-		Assert.assertEquals(expected, actual);
+		
+		try {
+			String actual = new MyAccountPage().customerNameLink.getText();
+			Assert.assertEquals(expected, actual);
+		} catch (NoSuchElementException  e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+			throw e;
+		}
 	   
 	}
 

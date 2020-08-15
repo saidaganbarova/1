@@ -36,6 +36,13 @@ public class ProductPage {
 
 	@FindBy (xpath =  "//p[@id='product_reference']//span")
 	public WebElement  model;
+
+	@FindBy (xpath =  "//p[@id='add_to_cart']//button")
+	public WebElement addToCartButton;
+	
+	@FindBy (xpath =  "//a[@title='Proceed to checkout']")
+	public WebElement proceedButton;
+	//a[@title='Proceed to checkout']
 	
 	public WebElement returnFirstSelectedOption() {
 		return new Select(size).getFirstSelectedOption();

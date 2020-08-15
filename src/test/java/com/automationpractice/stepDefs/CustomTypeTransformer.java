@@ -3,6 +3,7 @@ package com.automationpractice.stepDefs;
 import java.util.List;
 import java.util.Map;
 
+import com.automationpractice.pojos.Cart;
 import com.automationpractice.pojos.Product;
 import com.automationpractice.pojos.User;
 
@@ -39,6 +40,22 @@ public class CustomTypeTransformer {
 						row.get("City"),
 						row.get("Zip"),
 						row.get("Phone no"));
+	}
+	
+	
+	@DataTableType
+	public Cart cartEntry ( List<String> row) {
+		
+			
+		String productName = row.get(0);
+		double unitPrice = Double.parseDouble(row.get(1));
+		int quantity = Integer.parseInt(row.get(2));
+		double totalBefore =  Double.parseDouble(row.get(3));
+		double totalAfter =  Double.parseDouble(row.get(4));
+		
+		
+		
+		return new Cart(productName, unitPrice, quantity, totalBefore, totalAfter);
 	}
 	
 	

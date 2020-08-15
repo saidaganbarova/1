@@ -26,9 +26,9 @@ Feature: Login feature
    And I enter "dt123" to password field
    Then I should be able to login and name should be "Duotech Academy"
    
-    @temp 
+     
    Scenario Outline: Verify login using multiple credentials  using SO
-   
+  
    And I enter "<email>" to email field
    And I enter "<password>" to password field
    Then I should be able to login and name should be "<name>"
