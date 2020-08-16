@@ -1,4 +1,4 @@
-package com.automationpractice.utilities;
+package com.delta.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
