@@ -5,16 +5,14 @@ public class Cart {
 	private String productName;
 	private double unitPrice;
 	private int quantity;
-	private double totalBefore;
-	private double totalAfter;
 	
-	public Cart(String productName, double unitPrice, int quantity, double totalBefore, double totalAfter) {
+	
+	public Cart(String productName, double unitPrice, int quantity) {
 		super();
 		this.productName = productName;
 		this.unitPrice = unitPrice;
 		this.quantity = quantity;
-		this.totalBefore = totalBefore;
-		this.totalAfter = totalAfter;
+		
 	}
 
 	public String getProductName() {
@@ -41,21 +39,7 @@ public class Cart {
 		this.quantity = quantity;
 	}
 
-	public double getTotalBefore() {
-		return totalBefore;
-	}
-
-	public void setTotalBefore(double totalBefore) {
-		this.totalBefore = totalBefore;
-	}
-
-	public double getTotalAfter() {
-		return totalAfter;
-	}
-
-	public void setTotalAfter(double totalAfter) {
-		this.totalAfter = totalAfter;
-	}
+	
 	
 	
 	

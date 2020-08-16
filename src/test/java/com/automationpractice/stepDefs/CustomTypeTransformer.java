@@ -50,12 +50,11 @@ public class CustomTypeTransformer {
 		String productName = row.get(0);
 		double unitPrice = Double.parseDouble(row.get(1));
 		int quantity = Integer.parseInt(row.get(2));
-		double totalBefore =  Double.parseDouble(row.get(3));
-		double totalAfter =  Double.parseDouble(row.get(4));
 		
 		
 		
-		return new Cart(productName, unitPrice, quantity, totalBefore, totalAfter);
+		
+		return new Cart(productName, unitPrice, quantity);
 	}
 	
 	
