@@ -14,25 +14,4 @@ public class HomePage {
 	}
 	
 	
-	@FindBy (xpath = "//a[@title='Log in to your customer account']")
-	public WebElement signInButton;
-	
-
-	@FindBy (xpath = "(//a[contains( text(), 'Blouse')])[2]")
-	public WebElement blouse;
-	
-	@FindBy (xpath = "(//a[contains( text(), 'Blouse')])[2]")
-	public WebElement product;
-
-
-	@FindBy (xpath = "(//a[@title='Dresses'])[2]")
-	public WebElement dressButton;
-	
-	
-	public void clickOnProduct(String product) {
-		String xpath = "//h5//a[@title='"+product+"']";
-		Driver.getDriver().findElement(By.xpath(xpath)).click();
-		
-	}
-
 }
