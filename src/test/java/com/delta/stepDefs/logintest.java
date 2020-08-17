@@ -11,6 +11,7 @@ import com.delta.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import junit.framework.Assert;
 
 public class logintest {
 	
@@ -33,9 +34,9 @@ public class logintest {
 	   
 	   BrowserUtilities.waitFor(3);
 	   LoginPage lp = new LoginPage();
-	   lp.usernameInputBox.sendKeys("Testerqwe");
-	   lp.LastNameInputBox.sendKeys("test");
-	   lp.passwordInputBox.sendKeys("Mooncat123");
+	   lp.usernameInputBox.sendKeys("mumijuliya");
+	   lp.LastNameInputBox.sendKeys("Young");
+	   lp.passwordInputBox.sendKeys("Mooncat123!");
 	   lp.loginButton.click();
 		
 		
@@ -44,6 +45,9 @@ public class logintest {
 
 	@Then("I logged in")
 	public void iLoggedIn() { 
+		BrowserUtilities.waitFor(5);
+		System.out.println(Driver.getDriver().getTitle());
+		Assert.assertEquals("Airline Tickets & Flights: Book Direct with Delta Air Lines - Official Site", Driver.getDriver().getTitle());
 	}
 
 
