@@ -66,15 +66,17 @@ public class RsortsStepDefs {
 		rp.calenTable1();
 		rp.room.click();
 		rp.submit.click();
-		BrowserUtilities.waitFor(2);
-		String actual = rp.text.getText();
-		//System.out.println(actual);
-		String expected = "Important: This destination may have COVID-19 travel restrictions in place, including specific restrictions for lodging. Check any national, local, and health advisories for this destination before you book.";
-		Assert.assertEquals(actual, expected);
+		
 	}
 
 	@Then("I should be able to land on the next page")
 	public void iShouldBeAbleToLandOnTheNextPage() {
+		
+		BrowserUtilities.waitFor(2);
+		String actual = new ResortPage().text.getText();
+		String expected = "Important: This destination may have COVID-19 travel restrictions in place, including specific restrictions for lodging. Check any national, local, and health advisories for this destination before you book.";
+		Assert.assertEquals(actual, expected);
+		
 
 	}
 

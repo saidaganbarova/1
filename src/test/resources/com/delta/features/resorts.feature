@@ -3,7 +3,7 @@
 Feature: Resorts book verification 
  
   @temp
-  Scenario: Verify the the user can book Resorts
+  Scenario: Verify the user can book Resorts
   
     Given I am on home page
     

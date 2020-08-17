@@ -46,6 +46,10 @@ public class ResortPage {
 	@FindBy(xpath = "//p[@class='pv-ant']")
 	public WebElement text;
 	
+	@FindBy (xpath ="//h1[@class='hidden--xs hidden--s-m mt-small']")
+	public WebElement hotelText ;
+	
+	
 	public void calenTable() {
 		
 		for (int i = 0; i <calTable.size(); i++) {
