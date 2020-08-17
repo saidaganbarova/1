@@ -8,5 +8,3 @@ Feature: login
     Given I am on the homepage
    	When I click on LogIn 
   	Then I logged in
-    
- 
