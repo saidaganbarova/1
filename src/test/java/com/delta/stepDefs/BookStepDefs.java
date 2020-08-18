@@ -41,6 +41,7 @@ public class BookStepDefs {
 		BookPage bp = new BookPage();
 		bp.toButton.sendKeys("AUS" + Keys.ENTER);
 		bp.toButtonClose.click();
+		
 	}
 
 	@When("when I click on trip button and select one")

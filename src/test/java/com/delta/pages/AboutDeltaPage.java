@@ -26,7 +26,21 @@ public class AboutDeltaPage {
 	@FindBy(xpath = "//div[@class='search-results d-none pl-1 d-block']//li[2]//a[1]")
 	public WebElement about;
 	
+
+	@FindBy(xpath = "//body[@class='fresh-air ng-tns-0-1 mac-pr-0']")
+	public WebElement againPlay;
+	
 	@FindBy(xpath = "//div[@class='play']")
 	public WebElement play;
+	
+	@FindBy(xpath = "//div[@class='ytp-progress-bar-padding']")
+	public WebElement scroll;
+	
+
+	@FindBy(id = "ytp-settings-button")
+	public WebElement settings;
+	
+	@FindBy(xpath = "//button[@title='Full screen (f)']")
+	public WebElement window;
 	
 }

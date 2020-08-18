@@ -3,8 +3,8 @@
 Feature: Hotel Verification
  
 
- @temp
-  Scenario:Verify all the info before booking hotel
+ @temp2
+  Scenario: Verify all the info before booking hotel
   
   	
     Given I am on home page

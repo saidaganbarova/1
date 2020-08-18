@@ -53,6 +53,7 @@ public class RsortsStepDefs {
 	@When("I fill out all info")
 	public void iFillOutAllInfo() {
 		ResortPage rp = new ResortPage();
+		
 		rp.destButton.clear();
 		rp.destButton.sendKeys("Austin");
 		BrowserUtilities.waitFor(1);

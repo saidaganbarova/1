@@ -2,6 +2,7 @@ package com.delta.stepDefs;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.delta.pages.AboutDeltaPage;
@@ -20,6 +21,7 @@ public class AboutDeltaStepDefs {
 	public void iClickOnSearchButoon() {
 		AboutDeltaPage ad = new  AboutDeltaPage();
 		JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+		Actions a = new Actions(Driver.getDriver());
 		BrowserUtilities.waitForPageToLoad(3);
 		ad.search.click();  
 		ad.enter.sendKeys("About");
@@ -27,8 +29,24 @@ public class AboutDeltaStepDefs {
  		ad.about.click();
  		js.executeScript("window.scrollBy(0,500)");
  		BrowserUtilities.waitFor(3);
- 		js.executeScript("arguments[0].click();",ad.play);
+ 		a.click(ad.play).build().perform();
+ 		BrowserUtilities.waitFor(2);
+ 		js.executeScript("arguments[0].click();",ad.window);
+ 		BrowserUtilities.waitFor(5);
+ 		ad.againPlay.click();
+ 		a.clickAndHold(ad.scroll).moveByOffset(15, 0).click().build().perform();
+		
+ 		
+ 		
+ 		
+	//a.clickAndHold(ad.scroll).moveByOffset(15, 0).click().build().perform();
+ 		
+ 		//js.executeScript("arguments[0].click();",ad.play);
  		//BrowserUtilities.waitFor(1);
+// 		
+// 		a.click(dnh.play).build().perform();
+//		a.clickAndHold(dnh.scroll).moveByOffset(15, 0).click().build().perform();
+ 		//div[@class='youtube-player']//iframe
 	}
 
 	@When("I am on video button")
