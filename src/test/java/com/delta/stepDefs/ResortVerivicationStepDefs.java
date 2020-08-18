@@ -25,10 +25,10 @@ public class ResortVerivicationStepDefs {
 
 	@When("Selct the price")
 	public void selctThePrice() {
-
-		 BrowserUtilities.waitFor(2);
+		ResortVerificationPage rv = new ResortVerificationPage();
+		 BrowserUtilities.waitFor(1);
 		 Actions acs = new Actions(Driver.getDriver());
-		 acs.clickAndHold( new ResortVerificationPage().price).moveByOffset(-60,0).click().build().perform();
+		 acs.clickAndHold(rv.price).moveByOffset(-60,0).click().build().perform();
 		 
 	
 	}
