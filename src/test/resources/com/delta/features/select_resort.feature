@@ -4,7 +4,7 @@
   Feature: Select the resort and verify all information
 
 
- 
+ @temp
    Scenario: Select and verify the selected resort 
   
     Given I am on home page

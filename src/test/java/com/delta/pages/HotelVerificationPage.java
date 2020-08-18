@@ -20,10 +20,10 @@ public class HotelVerificationPage {
 	@FindBy(xpath = "(//h2[contains(text(),'Lakeway Resort and Spa')])[1]")
 	public WebElement hotelName;
 
-	@FindBy(xpath = "//input[@class='widget-query-autosuggest  clearable autosuggest-enabled'][@name='q-destination']")
+	@FindBy(xpath = "//span[contains(@class,'postal-addr')]")
 	public WebElement hotelAddress;
-	////li[1]//div[2]//div[1]//div[2]//div[1]//div[1]//div[1]//strong[1]
-	@FindBy(xpath = "(//strong[@class='current-price'][contains(text(),'$211')])[1]")
+	
+	@FindBy(xpath = "//li[1]//div[2]//div[1]//div[2]//div[1]//div[1]//div[1]//strong[1]")
 	public WebElement nightlyPrice;
 	
 	@FindBy(xpath = "//li[1]//div[2]//div[1]//div[2]//div[1]//div[1]//div[2]//p[1]")
@@ -35,7 +35,7 @@ public class HotelVerificationPage {
 	@FindBy(xpath = "//li[1]//div[2]//div[1]//div[2]//div[2]//form[1]//button[1]")
 	public WebElement reserve;
 	
-	@FindBy(xpath = "//div[@class='thumbnail']//span[contains(text(),'Non-Lakeview, King with Balcony')]")
+	@FindBy(xpath = "//div[@class='room-images-and-info']//span[@class='room-name'][contains(text(),'Non-Lakeview, King with Balcony')]")
 	public WebElement roomType;
 	
 	
