@@ -20,7 +20,7 @@
 Feature: Hotel Verification
  
 
- 
+ @temp
   Scenario:Verify all the info before booking hotel
   
   	
