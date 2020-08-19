@@ -11,14 +11,14 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = "@temp",
+		tags = "@temp1",
 		dryRun = false,
 		features = "src/test/resources/com/delta/features",
 		glue = "com/delta/stepDefs",
 		plugin = {"summary", 
 				 "pretty",
 				 "html:target/builtInReport",
-				 "json:target/Cucumber.json" // needed for pretty report
+				// "json:target/Cucumber.json" // needed for pretty report
 		
 		}, // summary -> generate unimplemented step definitions in console
 										// pretty -> more detailed output

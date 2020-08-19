@@ -1,8 +1,8 @@
 #Author:Saida
 
-Feature: Resorts book verification 
+  Feature: Resorts book verification 
  
- @temp
+  @temp
   Scenario: Verify the user can book Resorts
   
     Given I am on home page

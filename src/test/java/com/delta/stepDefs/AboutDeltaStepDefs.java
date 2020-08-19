@@ -26,8 +26,11 @@ public class AboutDeltaStepDefs {
 		ad.search.click();  
 		ad.enter.sendKeys("About");
 		BrowserUtilities.waitFor(1);
+		String name = ad.about.getText();
+		System.out.println(name);
+		if (name.equalsIgnoreCase("About Delta")) {
  		ad.about.click();
- 		
+		}
  		
  		
 
@@ -78,6 +81,7 @@ public class AboutDeltaStepDefs {
 		ad.click.click();
 		BrowserUtilities.waitFor(2);
 		ad.fullScreen.click();
+		BrowserUtilities.waitFor(2);
 		
 	}
 

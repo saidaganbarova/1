@@ -9,8 +9,6 @@
   
     Given I am on home page
     
-    Given I am on home page
-    
     When  I click on shop hotels
     And   I click on resorts
     And   I fill out all info 
