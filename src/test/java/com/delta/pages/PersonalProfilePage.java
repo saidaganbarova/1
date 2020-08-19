@@ -31,7 +31,59 @@ public class PersonalProfilePage {
 	public WebElement name;
 	
 			
+	
+	@FindBy(xpath="//a[@class='passport__add-link']")
+	public WebElement addPassport;		
 			
-			
+	
+
+	@FindBy(xpath="//input[@id = 'passportInfofirstName']")
+	public WebElement firstNameInput;
+
+	@FindBy(xpath="//input[@id = 'lastName']")
+	public WebElement lastName;	
+	
+	
+
+	@FindBy(xpath="//span[@id='gender-val']")
+	public WebElement gender;	
+	
+	
+
+	@FindBy(xpath="//li[@id='ui-list-gender2']")
+	public WebElement femaleGender;	
+	
+	
+	
+	@FindBy(xpath="//select[@id='dobMonth']")
+	public WebElement month;	
+	
+	
+	@FindBy(xpath="//select[@id='dobDate']")
+	public WebElement date;	
+	
+	
+	
+	@FindBy(xpath="//select[@id='dobYear']")
+	public WebElement year;	
+	
+	
+	
+	@FindBy(xpath="//li[@id='ui-list-expMonth6']")
+	public WebElement june;	
+	
+	@FindBy(xpath="//input[@id='passportNumber']")
+	public WebElement passportNum;	
+	
+	
+	
+	@FindBy(xpath="//span[@id='nationality-val']")
+	public WebElement nationality;	
+	
+	
+	
+	//li[@id='ui-list-nationality39'] 
+	@FindBy (xpath="//li[@id='ui-list-nationality39'] ")
+	public WebElement canada;
 	
 }
