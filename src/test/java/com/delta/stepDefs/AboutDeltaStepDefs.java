@@ -30,14 +30,7 @@ public class AboutDeltaStepDefs {
  		
  		
  		
-	//a.clickAndHold(ad.scroll).moveByOffset(15, 0).click().build().perform();
- 		
- 		//js.executeScript("arguments[0].click();",ad.play);
- 		//BrowserUtilities.waitFor(1);
-// 		
-// 		a.click(dnh.play).build().perform();
-//		a.clickAndHold(dnh.scroll).moveByOffset(15, 0).click().build().perform();
- 		//div[@class='youtube-player']//iframe
+
 	}
 
 	@When("I am on video button")
@@ -63,8 +56,8 @@ public class AboutDeltaStepDefs {
 		
  		BrowserUtilities.waitFor(2);
  		ad.playAgain.click();
- 		
-		
+ 		Driver.getDriver().switchTo().frame(ad.iframe);
+ 	//	a.clickAndHold(ad.scroll).moveByOffset(5, 0).click().build().perform();
 	}
 
 	@Then("I verify the functionalities")
@@ -73,23 +66,19 @@ public class AboutDeltaStepDefs {
 		AboutDeltaPage ad = new  AboutDeltaPage();
 		Actions a = new Actions(Driver.getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-//		
-//		ad.playAgain.click();
-//		ad.settings.click();
-//		ad.playAgain.click();
-		
-		
-		
-		
-		
-		//ad.againPlay.click();
-		a.click(ad.playAgain).build().perform();
-		a.clickAndHold(ad.scroll).moveByOffset(15, 0).click().build().perform();
-
+		BrowserUtilities.waitFor(5);
+		ad.sound.click();
 		BrowserUtilities.waitFor(2);
-		ad.playAgain.click();
+		ad.subtitles.click();
 		BrowserUtilities.waitFor(2);
-		ad.youtube.click();
+		ad.settings.click();
+		BrowserUtilities.waitFor(2);
+		ad.settings.click();
+		BrowserUtilities.waitFor(2);
+		ad.click.click();
+		BrowserUtilities.waitFor(2);
+		ad.fullScreen.click();
+		
 	}
 
 

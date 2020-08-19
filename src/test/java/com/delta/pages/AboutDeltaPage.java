@@ -34,18 +34,34 @@ public class AboutDeltaPage {
 	@FindBy(xpath = "//div[@class='play']")
 	public WebElement play;
 	
-	@FindBy(xpath = "//div[@class='ytp-progress-bar-padding']")
+	@FindBy(xpath = "//div[@class='ytp-scrubber-container']")
 	public WebElement scroll;
-	//iframe[@src='https://www.youtube.com/embed/hyOku-UMI-A?autoplay=1']
+	
 	
 
-	@FindBy(xpath = "//iframe[@src='https://www.youtube.com/embed/hyOku-UMI-A?autoplay=1']")
+	@FindBy(xpath = "//button[@class='ytp-mute-button ytp-button']")
+	public WebElement sound;
+
+	@FindBy(xpath = "//div[@class='youtube-player']//iframe")
 	public WebElement iframe;
 
-	@FindBy(id = "ytp-settings-button")
+	@FindBy(xpath= "//button[@class='ytp-button ytp-settings-button ytp-hd-quality-badge']")
 	public WebElement settings;
+	
+
+	@FindBy(xpath = "//button[@class='ytp-fullscreen-button ytp-button']")
+	public WebElement fullScreen;
+	
+
+	@FindBy(xpath = "//button[@aria-label='Subtitles/closed captions (c)']")
+	public WebElement subtitles;
+	
+	
 	
 	@FindBy(xpath = "//a[@class='ytp-youtube-button ytp-button yt-uix-sessionlink']")
 	public WebElement youtube;
+	
+	@FindBy(xpath = "//video[@class='video-stream html5-main-video']")
+	public WebElement click;
 	
 }
