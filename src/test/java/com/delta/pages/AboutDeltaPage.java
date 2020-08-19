@@ -28,19 +28,23 @@ public class AboutDeltaPage {
 	
 
 	@FindBy(xpath = "//body[@class='fresh-air ng-tns-0-1 mac-pr-0']")
-	public WebElement againPlay;
+	public WebElement playAgain;
 	
 	@FindBy(xpath = "//div[@class='play']")
 	public WebElement play;
 	
 	@FindBy(xpath = "//div[@class='ytp-progress-bar-padding']")
 	public WebElement scroll;
+	//iframe[@src='https://www.youtube.com/embed/hyOku-UMI-A?autoplay=1']
 	
+
+	@FindBy(xpath = "//iframe[@src='https://www.youtube.com/embed/hyOku-UMI-A?autoplay=1']")
+	public WebElement iframe;
 
 	@FindBy(id = "ytp-settings-button")
 	public WebElement settings;
 	
-	@FindBy(xpath = "//button[@title='Full screen (f)']")
-	public WebElement window;
+	@FindBy(xpath = "//a[@class='ytp-youtube-button ytp-button yt-uix-sessionlink']")
+	public WebElement youtube;
 	
 }

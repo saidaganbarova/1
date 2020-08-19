@@ -17,25 +17,16 @@ import io.cucumber.java.en.When;
 public class AboutDeltaStepDefs {
 	
 	
-	@Given("I click on search butoon")
-	public void iClickOnSearchButoon() {
+	   @Given("I click on search butoon")
+	    public void iClickOnSearchButoon() {
 		AboutDeltaPage ad = new  AboutDeltaPage();
-		JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-		Actions a = new Actions(Driver.getDriver());
+		
+		
 		BrowserUtilities.waitForPageToLoad(3);
 		ad.search.click();  
 		ad.enter.sendKeys("About");
 		BrowserUtilities.waitFor(1);
  		ad.about.click();
- 		js.executeScript("window.scrollBy(0,500)");
- 		BrowserUtilities.waitFor(3);
- 		a.click(ad.play).build().perform();
- 		BrowserUtilities.waitFor(2);
- 		js.executeScript("arguments[0].click();",ad.window);
- 		BrowserUtilities.waitFor(5);
- 		ad.againPlay.click();
- 		a.clickAndHold(ad.scroll).moveByOffset(15, 0).click().build().perform();
-		
  		
  		
  		
@@ -51,19 +42,55 @@ public class AboutDeltaStepDefs {
 
 	@When("I am on video button")
 	public void iAmOnVideoButton() {
-	   
+		
+		AboutDeltaPage ad = new  AboutDeltaPage();
+		Actions a = new Actions(Driver.getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+		js.executeScript("window.scrollBy(0,500)");
+ 		BrowserUtilities.waitFor(3);
+ 		a.click(ad.play).build().perform();
+ 		BrowserUtilities.waitFor(2);
+ 		
+ 		
 	}
 
 	@When("I click on play button")
 	public void iClickOnPlayButton() {
-	    
+		
+		AboutDeltaPage ad = new  AboutDeltaPage();
+		Actions a = new Actions(Driver.getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+		
+ 		BrowserUtilities.waitFor(2);
+ 		ad.playAgain.click();
+ 		
+		
 	}
 
 	@Then("I verify the functionalities")
 	public void iVerifyTheFunctionalities() {
-	    
-	}
+		
+		AboutDeltaPage ad = new  AboutDeltaPage();
+		Actions a = new Actions(Driver.getDriver());
+		JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+//		
+//		ad.playAgain.click();
+//		ad.settings.click();
+//		ad.playAgain.click();
+		
+		
+		
+		
+		
+		//ad.againPlay.click();
+		a.click(ad.playAgain).build().perform();
+		a.clickAndHold(ad.scroll).moveByOffset(15, 0).click().build().perform();
 
+		BrowserUtilities.waitFor(2);
+		ad.playAgain.click();
+		BrowserUtilities.waitFor(2);
+		ad.youtube.click();
+	}
 
 
 }
