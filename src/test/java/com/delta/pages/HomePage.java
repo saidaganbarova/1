@@ -12,10 +12,10 @@ public class HomePage {
 	}
 	
 	
-	
-	
 	@FindBy(xpath="//button[@class='login-btn btn btn-danger']")
 	public WebElement loginButton;
 	
+	@FindBy (linkText = "SIGN UP")
+	public WebElement signUpButton;
 	
 }
