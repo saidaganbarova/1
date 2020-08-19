@@ -48,8 +48,17 @@ public class logintest {
 		BrowserUtilities.waitFor(5);
 		System.out.println(Driver.getDriver().getTitle());
 		Assert.assertEquals("Airline Tickets & Flights: Book Direct with Delta Air Lines - Official Site", Driver.getDriver().getTitle());
+	
+	
+	
 	}
 
+	
+	
+	
+	
+	
+	
 
 	
 	
