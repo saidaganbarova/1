@@ -2,7 +2,7 @@
 Feature: login
 
   
-  Scenario: Click on Login
+  Scenario: Login
     Given I am on the homepage
 		When I click on LogIn 
   	Then I logged in
@@ -34,7 +34,7 @@ Feature: login
     Then Passport info is deleted
     
     
-    @tempi 
+  @tempi
   Scenario: While adding passport info display error
     Given I am on the homepage
     When I click on LogIn

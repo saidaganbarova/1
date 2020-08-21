@@ -34,7 +34,7 @@ public class logintest {
 	   
 	   BrowserUtilities.waitFor(3);
 	   LoginPage lp = new LoginPage();
-	   lp.usernameInputBox.sendKeys("mumijuliya");
+	   lp.usernameInputBox.sendKeys("caffeine4130");
 	   lp.LastNameInputBox.sendKeys("Young");
 	   lp.passwordInputBox.sendKeys("Mooncat123!");
 	   lp.loginButton.click();
