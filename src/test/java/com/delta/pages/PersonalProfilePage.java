@@ -101,7 +101,7 @@ public class PersonalProfilePage {
 	
 	
 
-	@FindBy (xpath="//span[@class='select-ui-wrapper ']")
+	@FindBy (xpath="//span[@id='residence-val']")
 	public WebElement countryOfResidence;
 
 	
@@ -110,7 +110,7 @@ public class PersonalProfilePage {
 	public WebElement countryPick;
 	
 	
-	@FindBy (xpath="//button[@class='btn btn-block btn-danger ng-star-inserted']") 
+	@FindBy (xpath="//div[@class='col-12 col-md-4 offset-md-4 save-btn-section']") 
 	public WebElement save;
 
 	
@@ -141,5 +141,32 @@ public class PersonalProfilePage {
 	@FindBy (xpath="//li[@id='ui-list-expYear5']") 
 	public WebElement expYearPick;
 	
+	
+	
+	
+	
+
+	@FindBy (xpath="//li[@id='ui-list-residence79']") 
+	public WebElement french;
+	
+	
+	
+	@FindBy (xpath="//span[@class='alert-text']") 
+	public WebElement alert;
+	
+	
+	@FindBy (xpath="//a[@class='details-text']") 
+	public WebElement details;
+	
+	
+	
+			@FindBy (xpath="(//a[@class='ng-star-inserted'])[2]") 
+			public WebElement deleteInfo;
+			
+			
+			
+			
+			@FindBy (xpath="//div[@class='col-12 col-md-4 save-btn-section continue-btn-section offset-md-4 ng-star-inserted']") 
+			public WebElement yesButton;
 	
 }
