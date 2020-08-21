@@ -40,7 +40,7 @@ public void iClickOnMyNameAndPickProfile() throws InterruptedException {
 @Then("I confirm my name and my DOB")
 public void iConfirmMyNameAndMyDOB() {
 	PersonalProfilePage ppp = new PersonalProfilePage();
-	System.out.println(ppp.DOB.getText());
+	//System.out.println(ppp.DOB.getText());
 	String [] dob = ppp.DOB.getText().split(" ");
 	String m = dob[0];
 	String d = dob[1].replace(",", "");
@@ -90,7 +90,7 @@ public void addPassportInfo() throws InterruptedException {
 	ppp.expMay.click();
 	ppp.expYear.click();
 	ppp.expYearPick.click();
-	Thread.sleep(5000);
+	BrowserUtilities.waitFor(5);
 	
 	ppp.expDate.click();
 	ppp.expFive.click();
@@ -99,22 +99,70 @@ public void addPassportInfo() throws InterruptedException {
 	
 	
 	
-	
-	ppp.countryOfResidence.click();
-
 	BrowserUtilities.waitFor(5);
-	a.moveToElement(ppp.save).click().build().perform();
+	ppp.countryOfResidence.click();
+	ppp.french.click();
+	ppp.save.click();
+}
+	
+	
+	@Then("Confirm allert present")
+	public void confirmAllertPresent() {
+		PersonalProfilePage ppp = new PersonalProfilePage();
+		Assert.assertTrue(ppp.alert.isEnabled());
+		
+		
+		
+	}
+	
+	@Then("I clicked on passport and deleted info")
+	public void iClickedOnPassportAndDeletedInfo() {
+		PersonalProfilePage ppp = new PersonalProfilePage();
+		ppp.details.click();
+		BrowserUtilities.waitFor(2);
+		ppp.deleteInfo.click();
+		BrowserUtilities.waitFor(2);
+		ppp.yesButton.click();
+	}
+	
+	
+	
+	
+	
+
+	@Then("Passport info is deleted")
+	public void passportInfoIsDeleted() {
+	   
+		PersonalProfilePage ppp = new PersonalProfilePage();
+		Assert.assertTrue(ppp.addPassport.isEnabled());
+		
+		
+	}
+
+	
+	
+	@Then("Try to add passport info")
+	public void tryToAddPassportInfo() {
+		PersonalProfilePage ppp = new PersonalProfilePage();
+		ppp.addPassport.click();
+		ppp.lastName.sendKeys("Young");
+		
+		
+		
+		
+	}
+
+	@Then("confirm error is displayed")
+	public void confirmErrorIsDisplayed() {
+		Boolean ans = Driver.getDriver().findElement(By.xpath("//div[@id='passportInfofirstName-error']")).isEnabled();
+		Assert.assertTrue(ans);
+		
+	}
 
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	//li[@id='ui-list-nationality39']    canada
 	
 
    
@@ -125,4 +173,4 @@ public void addPassportInfo() throws InterruptedException {
 	
 	
 
-}
+

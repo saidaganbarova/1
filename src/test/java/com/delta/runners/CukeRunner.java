@@ -12,10 +12,18 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		tags = "@temp",
+
+		tags = "@murad1",
         
 
 	//	dryRun = false,
+
+	
+		
+
+
+
+
 		features = "src/test/resources/com/delta/features",
 		glue = "com/delta/stepDefs",
 		plugin = {"summary", 
@@ -28,7 +36,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		monochrome = true // fixes the ? on the console for windows users
 
 	
-	//,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
+        //,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
 
 			//,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
 
