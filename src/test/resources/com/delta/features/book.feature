@@ -2,7 +2,7 @@
 
 
   Feature: Verification book page
-  @temp
+  @temps
   Scenario:  Verify that the user can enter all information and land on the next page
     Given  I am on home page
     When   I click on from button and enter a destination

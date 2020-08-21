@@ -11,8 +11,16 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+<<<<<<< HEAD
 		tags = "@tempi",
 		
+=======
+
+		tags = "@temps",
+
+
+		dryRun = false,
+>>>>>>> f3acec875381bc121cf36df9175923944761c4e9
 		features = "src/test/resources/com/delta/features",
 		glue = "com/delta/stepDefs",
 		plugin = {"summary", 
@@ -34,6 +42,6 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		,stepNotifications = true
 		)
 
-public class CukeRunner {
+public class CukeRunner { 
 
 }
