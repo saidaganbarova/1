@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.By.ByXPath;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
 import com.delta.pages.PersonalProfilePage;
@@ -55,6 +57,12 @@ public void iConfirmMyNameAndMyDOB() {
 
 @Then("Add Passport Info")
 public void addPassportInfo() throws InterruptedException {
+
+	Actions a = new Actions(Driver.getDriver());
+	JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+	js.executeScript("window.scrollBy(0,500)");
+	
+	
 	PersonalProfilePage ppp = new PersonalProfilePage();
 	ppp.addPassport.click();
 	BrowserUtilities.waitForPageToLoad(5);
@@ -63,34 +71,46 @@ public void addPassportInfo() throws InterruptedException {
 	ppp.gender.click();
 	ppp.femaleGender.click();
 	
-//	Select smonth= new Select(ppp.month);
-//
-//	ppp.month.click();
-//	smonth.selectByValue("10");
-//	
-//	
-//	Select sdate = new Select(ppp.date);
-//	sdate.selectByVisibleText("9");
-//	
-//	Select syear = new Select (ppp.year);
-//	syear.selectByVisibleText("1986");
 	
+	ppp.month.click();
+	ppp.feb.click();
+	ppp.date.click();
+	ppp.fifthDate.click();
+	ppp.year.click();
 	
-	
-	
-	
-	Actions a = new Actions(Driver.getDriver());
-	a.moveToElement(ppp.month).click().build().perform();
-	a.moveToElement(ppp.june).click().build().perform();
-	
-	
-	
-	
+	ppp.pickedAyear.click();
+	ppp.passportNum.sendKeys("AB123123");
 	
 	
 	a.moveToElement(ppp.nationality).click().build().perform();
 	a.moveToElement(ppp.canada).click().build().perform();
 	Thread.sleep(5000);
+	
+	ppp.expMonth.click();
+	ppp.expMay.click();
+	ppp.expYear.click();
+	ppp.expYearPick.click();
+	Thread.sleep(5000);
+	
+	ppp.expDate.click();
+	ppp.expFive.click();
+	
+	
+	
+	
+	
+	
+	ppp.countryOfResidence.click();
+
+	BrowserUtilities.waitFor(5);
+	a.moveToElement(ppp.save).click().build().perform();
+
+	
+	
+	
+	
+	
+	
 	
 	
 	

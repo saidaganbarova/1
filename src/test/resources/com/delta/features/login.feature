@@ -17,7 +17,7 @@ Feature: login
     Then I confirm my name and my DOB
 
     
-     @tag
+     @tempi
   Scenario: Click on Login
     Given I am on the homepage
     When I click on LogIn

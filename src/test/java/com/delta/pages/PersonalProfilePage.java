@@ -55,22 +55,33 @@ public class PersonalProfilePage {
 	
 	
 	
-	@FindBy(xpath="//select[@id='dobMonth']")
+	@FindBy(xpath="//span[@id='dobMonth-val']")
 	public WebElement month;	
 	
 	
-	@FindBy(xpath="//select[@id='dobDate']")
+	@FindBy(xpath="//span[@id='dobDate-val']")
 	public WebElement date;	
 	
 	
+
+	@FindBy(xpath="//li[@id='ui-list-dobDate4']")
+	public WebElement fifthDate;	
 	
-	@FindBy(xpath="//select[@id='dobYear']")
+	
+	
+	@FindBy(xpath="//span[@id='dobYear-val']")
 	public WebElement year;	
 	
 	
+	@FindBy(xpath="//li[@id='ui-list-dobYear10']")
+	public WebElement pickedAyear;	
 	
-	@FindBy(xpath="//li[@id='ui-list-expMonth6']")
-	public WebElement june;	
+	
+	
+	@FindBy(xpath="//li[@id='ui-list-dobMonth2']")
+	public WebElement feb;	
+	
+	
 	
 	@FindBy(xpath="//input[@id='passportNumber']")
 	public WebElement passportNum;	
@@ -85,5 +96,50 @@ public class PersonalProfilePage {
 	//li[@id='ui-list-nationality39'] 
 	@FindBy (xpath="//li[@id='ui-list-nationality39'] ")
 	public WebElement canada;
+	
+	
+	
+	
+
+	@FindBy (xpath="//span[@class='select-ui-wrapper ']")
+	public WebElement countryOfResidence;
+
+	
+	
+	@FindBy (xpath="//li[@id='ui-list-residence16']")
+	public WebElement countryPick;
+	
+	
+	@FindBy (xpath="//button[@class='btn btn-block btn-danger ng-star-inserted']") 
+	public WebElement save;
+
+	
+	@FindBy (xpath="//span[@id='expMonth-val']") 
+	public WebElement expMonth;
+	
+	
+	@FindBy (xpath="//li[@id='ui-list-expMonth5']") 
+	public WebElement expMay;
+	
+	
+	
+	@FindBy (xpath="//span[@id='expDate-val']") 
+	public WebElement expDate;
+	
+
+	@FindBy (xpath="//li[@id='ui-list-expDate5']") 
+	public WebElement expFive;
+	
+
+	
+	@FindBy (xpath="//span[@id='expYear-val']") 
+	public WebElement expYear;
+	
+	
+	
+	
+	@FindBy (xpath="//li[@id='ui-list-expYear5']") 
+	public WebElement expYearPick;
+	
 	
 }
