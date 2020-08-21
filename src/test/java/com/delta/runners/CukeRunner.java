@@ -11,7 +11,11 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+<<<<<<< HEAD
 		tags = "@temps",
+=======
+		tags = "@tempi",
+>>>>>>> 44bf363fa532deec75f5b390fa8ffae733be4f0e
 		dryRun = false,
 		features = "src/test/resources/com/delta/features",
 		glue = "com/delta/stepDefs",
@@ -23,8 +27,12 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		}, // summary -> generate unimplemented step definitions in console
 										// pretty -> more detailed output
 		monochrome = true // fixes the ? on the console for windows users
+
 	
 	//,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
+
+			//,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
+
 		
 		,snippets = SnippetType.CAMELCASE
 		,stepNotifications = true
