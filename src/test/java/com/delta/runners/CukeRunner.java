@@ -12,10 +12,10 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		tags = "@temps",
+		tags = "@temp",
+        
 
-
-		dryRun = false,
+	//	dryRun = false,
 		features = "src/test/resources/com/delta/features",
 		glue = "com/delta/stepDefs",
 		plugin = {"summary", 

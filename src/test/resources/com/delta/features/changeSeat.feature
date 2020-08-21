@@ -2,7 +2,7 @@
 
 Feature: Change Upgrade Seat functionality negative
 
-  @murad1
+  @murad2
   Scenario: Verify Change Upgrade Seat functionality 
   
     Given I am on home page
