@@ -141,7 +141,24 @@ public void addPassportInfo() throws InterruptedException {
 
 	
 	
-	
+	@Then("Try to add passport info")
+	public void tryToAddPassportInfo() {
+		PersonalProfilePage ppp = new PersonalProfilePage();
+		ppp.addPassport.click();
+		ppp.lastName.sendKeys("Young");
+		
+		
+		
+		
+	}
+
+	@Then("confirm error is displayed")
+	public void confirmErrorIsDisplayed() {
+		Boolean ans = Driver.getDriver().findElement(By.xpath("//div[@id='passportInfofirstName-error']")).isEnabled();
+		Assert.assertTrue(ans);
+		
+	}
+
 	
 	
 	

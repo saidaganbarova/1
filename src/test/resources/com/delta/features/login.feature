@@ -15,7 +15,7 @@ Feature: login
     And I click on my name and pick profile
     Then I confirm my name and my DOB
 
-   @tempi 
+ 
   Scenario: Add Passport Info and Doublecheck it
     Given I am on the homepage
     When I click on LogIn
@@ -24,7 +24,7 @@ Feature: login
     And Add Passport Info
     Then Confirm allert present
 
-   @tempi
+   
   Scenario: Delete Passport Info
     Given I am on the homepage
     When I click on LogIn
@@ -34,7 +34,15 @@ Feature: login
     Then Passport info is deleted
     
     
-    
+    @tempi 
+  Scenario: While adding passport info display error
+    Given I am on the homepage
+    When I click on LogIn
+    Then I logged in
+     And I click on my name and pick profile
+   	And Try to add passport info
+   	Then confirm error is displayed
+   	
     
     
     

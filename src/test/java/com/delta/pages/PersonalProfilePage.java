@@ -168,5 +168,11 @@ public class PersonalProfilePage {
 			
 			@FindBy (xpath="//div[@class='col-12 col-md-4 save-btn-section continue-btn-section offset-md-4 ng-star-inserted']") 
 			public WebElement yesButton;
+			
+			
+			
+			
+			@FindBy (xpath="//input[@id='passportInfofirstName']") 
+			public WebElement error;		
 	
 }
