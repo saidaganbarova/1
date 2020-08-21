@@ -54,12 +54,12 @@ public class HotelVerificationStepDefs {
 		
 		String actualNigttlyPrice = hv.nightlyPrice.getText();
 		System.out.println("Nigtly price: " + actualNigttlyPrice);
-		String expectedNightlyPrice = "$195";
+		String expectedNightlyPrice = "$193";
 		Assert.assertEquals(actualNigttlyPrice, expectedNightlyPrice);
 		
 		String actualTotalPrice = hv.totalPrice.getText();
 		System.out.println("Total price " + actualTotalPrice);
-		String expectedTotalPrice = "($585 for 3 nights)";
+		String expectedTotalPrice = "($580 for 3 nights)";
 		Assert.assertEquals(actualTotalPrice, expectedTotalPrice);
 		
 		String actualRoomType = hv.roomType.getText();
@@ -69,7 +69,7 @@ public class HotelVerificationStepDefs {
 		
 		String actualCancelText = hv.freeCancel.getText();
 		System.out.println("Cancel text: " + actualCancelText);
-		String expectedCancelText = "Free cancellation";
+		String expectedCancelText = "Cancellation policy";
 		Assert.assertEquals(actualCancelText, expectedCancelText);
 	}
 	
@@ -78,7 +78,6 @@ public class HotelVerificationStepDefs {
 	public void iShouldBeAbleReserve() {
 	    
 	}
-
 	
 	
 	

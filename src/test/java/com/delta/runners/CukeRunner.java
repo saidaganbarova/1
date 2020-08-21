@@ -11,13 +11,13 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = "@temp1",
+		tags = "@temps",
 		dryRun = false,
 		features = "src/test/resources/com/delta/features",
 		glue = "com/delta/stepDefs",
 		plugin = {"summary", 
 				 "pretty",
-				 "html:target/builtInReport",
+				 "html:target/builtInReport.html",
 				// "json:target/Cucumber.json" // needed for pretty report
 		
 		}, // summary -> generate unimplemented step definitions in console
@@ -30,6 +30,6 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		,stepNotifications = true
 		)
 
-public class CukeRunner {
+public class CukeRunner { 
 
 }

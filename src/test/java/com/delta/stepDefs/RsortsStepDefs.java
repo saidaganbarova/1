@@ -66,8 +66,7 @@ public class RsortsStepDefs {
 		rp.clickCal2.click();
 		rp.calenTable1();
 		rp.room.click();
-		rp.submit.click();
-		
+		rp.submit.click();	
 	}
 
 	@Then("I should be able to land on the next page")
