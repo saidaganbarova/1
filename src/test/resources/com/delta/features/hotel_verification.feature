@@ -3,7 +3,7 @@
 Feature: Hotel Verification
  
 
- @temp
+ @temps
   Scenario: Verify all the info before booking hotel
   
   	

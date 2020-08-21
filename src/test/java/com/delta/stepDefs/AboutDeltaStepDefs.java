@@ -42,7 +42,7 @@ public class AboutDeltaStepDefs {
 		AboutDeltaPage ad = new  AboutDeltaPage();
 		Actions a = new Actions(Driver.getDriver());
 		JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-		js.executeScript("window.scrollBy(0,500)");
+		js.executeScript("window.scrollBy(0,300)");
  		BrowserUtilities.waitFor(3);
  		a.click(ad.play).build().perform();
  		BrowserUtilities.waitFor(2);
@@ -50,7 +50,7 @@ public class AboutDeltaStepDefs {
  		
 	}
 
-	@When("I click on play button")
+@When("I click on play button")
 	public void iClickOnPlayButton() {
 		
 		AboutDeltaPage ad = new  AboutDeltaPage();
@@ -73,10 +73,8 @@ public class AboutDeltaStepDefs {
 		ad.sound.click();
 		BrowserUtilities.waitFor(2);
 		ad.subtitles.click();
-		BrowserUtilities.waitFor(2);
-		ad.settings.click();
-		BrowserUtilities.waitFor(2);
-		ad.settings.click();
+		//BrowserUtilities.waitFor(2);
+		//ad.settings.click();
 		BrowserUtilities.waitFor(2);
 		ad.click.click();
 		BrowserUtilities.waitFor(2);

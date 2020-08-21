@@ -2,7 +2,7 @@
 
 Feature: About Delta
 
-  @temp1
+  @temps
   Scenario: Verify video buttons functionalities
   
     Given I am on home page

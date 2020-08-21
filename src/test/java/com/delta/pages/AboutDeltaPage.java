@@ -1,6 +1,8 @@
 package com.delta.pages;
 
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -63,5 +65,28 @@ public class AboutDeltaPage {
 	
 	@FindBy(xpath = "//video[@class='video-stream html5-main-video']")
 	public WebElement click;
+	//div[@class='search-results d-none pl-1 d-block']//li
+	
+	@FindBy(xpath = "//div[@class='search-results d-none pl-1 d-block']//li")
+	public List <WebElement> about1;
+	
+
+	
+	
+	
+	
+	public void aboutDelta() {
+		for (int i = 0; i < about1.size(); i++) {
+			String date = about1.get(i).getText();
+			if (date.equalsIgnoreCase("About Delta")) {
+				about1.get(i).click();
+				break;
+			}
+			
+			
+	
+}
+}
+	
 	
 }

@@ -2,7 +2,7 @@
 
   Feature: Resorts book verification 
  
-  @temp
+  @temps
   Scenario: Verify the user can book Resorts
   
     Given I am on home page
