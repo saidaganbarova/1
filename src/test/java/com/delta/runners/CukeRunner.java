@@ -18,20 +18,20 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
         
 
 	
-
+		tags = "@iuliia",
 		features = "src/test/resources/com/delta/features",
 		glue = "com/delta/stepDefs",
 		plugin = {"summary", 
 				 "pretty",
 				 "html:target/builtInReport.html",
-				// "json:target/Cucumber.json" // needed for pretty report
+				 "json:target/Cucumber.json" // needed for pretty report
 		
 		}, // summary -> generate unimplemented step definitions in console
 										// pretty -> more detailed output
 		monochrome = true // fixes the ? on the console for windows users
 
 	
-       // ,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
+     //  ,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
 
 			
 		

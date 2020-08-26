@@ -39,4 +39,14 @@ public class LoginPage {
 	public WebElement loginButton;
 	
 	
+	
+	
+	@FindBy(xpath="//span[@class='pax-name']")
+	public WebElement nameConfirmation;
+	
+	
+	@FindBy(xpath="//a[@id='flyout-logOut-link']")
+	public WebElement logout;
+	
+	
 }
