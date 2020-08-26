@@ -2,6 +2,7 @@ package com.delta.stepDefs;
 
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.interactions.Actions;
 
@@ -96,11 +97,12 @@ public class LoginPageStepDef {
 		
 		ExcelUtils sheet = new ExcelUtils("loginIntro.xlsx", "Sheet1");
 		List <Map <String, String>> data = sheet.getDataAsListOfMaps();
-	   // System.out.println(data);
+	  
 	  
 		String actual = "Iuliia";
 		
 		for (int i = 0; i< data.size(); i++) {
+			try {
 			Map< String, String > row = data.get(i);
 		
 			Actions a = new Actions(Driver.getDriver());
@@ -110,14 +112,33 @@ public class LoginPageStepDef {
 	    	lp.LastNameInputBox.sendKeys("Young");
 	    	lp.passwordInputBox.sendKeys(row.get("Password"));
 	    	lp.loginButton.click();
+	    	
 	    	BrowserUtilities.waitFor(5);
-	    	Assert.assertEquals(lp.nameConfirmation.getText(), "Iuliia");
-	    	BrowserUtilities.waitFor(2);
+	    	
 	    	lp.nameConfirmation.click();
 	    	BrowserUtilities.waitFor(2);
 	    	lp.logout.click();
 	    	BrowserUtilities.waitFor(5);
 	    	
+	    	
+			
+			
+			
+			
+	    	
+			Assert.assertEquals(lp.nameConfirmation.getText(), "Iuliia");
+	  	
+			}
+			catch (Exception e) {
+				
+				
+				
+				//throw  e;
+				//break;
+				
+			}
+			Driver.getDriver().navigate().back();
+			
 	    	
 			
 		}
