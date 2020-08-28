@@ -62,13 +62,13 @@ public class LoginPageStepDef {
 	
 	
 	@When("I enter {string} and {string}")
-	public void iEnterAnd(String a, String b) {
+	public void iEnterAnd(String userName, String pass) {
 		   LoginPage lp = new LoginPage();
 		   BrowserUtilities.waitFor(3);
 		 
-		   lp.usernameInputBox.sendKeys(a);
+		   lp.usernameInputBox.sendKeys(userName);
 		   lp.LastNameInputBox.sendKeys("Young");
-		   lp.passwordInputBox.sendKeys(b);
+		   lp.passwordInputBox.sendKeys(pass);
 		   lp.loginButton.click();
 	
 	
@@ -146,6 +146,46 @@ public class LoginPageStepDef {
 	    
 	}
 
+	
+	
+	
+	
+
+	@When("I enter the {string} and {string} and {string}")
+	public void iEnterTheAndAnd(String userName, String lastName, String password) {
+		try {HomePage hp = new HomePage();
+		Actions a = new Actions(Driver.getDriver());
+		a.moveToElement(hp.loginButton).click().build().perform();
+		BrowserUtilities.waitFor(5);
+		LoginPage lp = new LoginPage();
+		lp.usernameInputBox.sendKeys(userName);
+		lp.LastNameInputBox.sendKeys(lastName);
+		lp.passwordInputBox.sendKeys(password);
+		lp.loginButton.click();}
+		catch (Exception e) {
+			
+			throw e;
+		}
+		
+	}
+
+	@Then("I login and verify the {string}")
+	public void iLoginAndVerifyThe(String result) {
+		BrowserUtilities.waitFor(5);
+		LoginPage lp = new LoginPage();
+		System.out.println(lp.nameConfirmation.getText());
+		System.out.println(result+"result is this ");
+		Assert.assertEquals(lp.nameConfirmation.getText(), result);
+		
+//		System.out.println(Driver.getDriver().getTitle());
+//		
+//		Assert.assertEquals("Airline Tickets & Flights: Book Direct with Delta Air Lines - Official Site", Driver.getDriver().getTitle());
+	
+	    
+		
+	}
+
+	
 	
 	
 	
