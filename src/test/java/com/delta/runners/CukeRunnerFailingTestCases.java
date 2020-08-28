@@ -11,10 +11,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(
 		
 		
-		features = "@target/failed.txt",
+		features = "@target/failed.txt",  // failing tests are stored in here
 		glue = "com/automationpractice/stepDefs",
 		plugin = {"summary",
-				
 				
 				 "html:target/builtInReport",
 				 "json:target/Cucumber.json" // needed for pretty report
@@ -28,6 +27,6 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		,stepNotifications = true
 		)
 
-public class FailedScenariosRunner {
+public class CukeRunnerFailingTestCases {
 
 }

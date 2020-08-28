@@ -68,8 +68,6 @@ Feature: login
   @Iuliia
     Scenario Outline: Title of your scenario outline
   	Given I am on the homepage 
-  	
-  	
     When I enter the "<username>" and "<lastname>" and "<password>" 
     Then I login and verify the "<nameStatus>" 
 
@@ -77,7 +75,7 @@ Feature: login
       | username   | lastname 	| password  	| nameStatus|
       | mumijuliya |     young  | Mooncat123! |Iuliia|
       | caffeine4130 |    young   | Mooncat123!  |Iuliia|
-      | mycatis 	 |    funny   | doesnot123  |noacc|
+      #| mycatis 	 |    funny   | doesnot123  |noacc|
   
     	
     	

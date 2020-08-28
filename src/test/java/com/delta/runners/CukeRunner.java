@@ -21,7 +21,9 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		features = "src/test/resources/com/delta/features",
 		glue = "com/delta/stepDefs",
 		plugin = {"summary", 
-				 "pretty",
+				 "rerun: target/failed.txt" ,  // Instead of pretty this is where our failed tests would go
+
+				// "pretty",
 				 "html:target/builtInReport.html",
 				 "json:target/Cucumber.json" // needed for pretty report
 		
