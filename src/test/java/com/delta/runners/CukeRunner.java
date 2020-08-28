@@ -13,9 +13,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(
 
 
-
-
-        
+	//	tags = "@temps",
+		  
 
 	
 		tags = "@Elshan",
