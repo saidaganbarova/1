@@ -79,7 +79,7 @@ public class BookPage {
 
 		for (int i = 0; i < departDateButton.size(); i++) {
 			String date = departDateButton.get(i).getText();
-			if (date.equalsIgnoreCase("23")) {
+			if (date.equalsIgnoreCase("28")) {
 				departDateButton.get(i).click();
 				break;
 			}
@@ -88,7 +88,7 @@ public class BookPage {
 
 		for (int i = 0; i < returntDateButton.size(); i++) {
 			String date = returntDateButton.get(i).getText();
-			if (date.equalsIgnoreCase("26")) {
+			if (date.equalsIgnoreCase("30")) {
 				returntDateButton.get(i).click();
 				break;
 			}

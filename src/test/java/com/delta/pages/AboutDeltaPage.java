@@ -17,7 +17,7 @@ public class AboutDeltaPage {
 	PageFactory.initElements(Driver.getDriver(), this);
 	
 	}
-	
+	//a[.='']
 	@FindBy(xpath = "//ngc-search[@class='d-none d-lg-block ng-tns-c0-0 ng-star-inserted']//img")
 	public WebElement search;
 	
