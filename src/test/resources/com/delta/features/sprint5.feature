@@ -36,7 +36,7 @@ Feature: Testing using string
       | Hyatt House Austin/Downtown | 09/28/20 | 10/04/20 |     1 |      2 |        0 |
     And click on search buttonn
 
-
+  # User pojo 
   Scenario: Verify hotel details using cucumber custom type
     Given I am on home page
     When I click shop hotel
@@ -66,7 +66,8 @@ Feature: Testing using string
       | John       | White     |   372901735708567   |
       | Bruno      | Mars      |   123455666783458   |   
       
-    
+  
+    # Customer pojo
     Scenario: Verify confirmation field using multiple credentials
          
           Given  I am on home page   
