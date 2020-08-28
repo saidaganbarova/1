@@ -84,7 +84,7 @@ public class SignUpPage {
 	public WebElement password;
 	
 	
-	requiredEqualTo
+	
 	@FindBy (id= "requiredEqualTo")
 	public WebElement passwordConf;
 	
