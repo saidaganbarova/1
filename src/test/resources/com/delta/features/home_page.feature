@@ -1,4 +1,5 @@
-
+#paramets
+@Iuliia
 Feature: Click on menu buttons
 
   Scenario: click on top menu buttons

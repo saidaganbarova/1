@@ -116,8 +116,15 @@
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
-
-						<include>**/*CukeRunner.java</include>
+						
+						
+						
+						<include>**/*CukeRunner*.java</include>
+						<!-- <include>**/*FailedScenariousRunner.java</include> -->
+					<!--	<include>${runner}</include> -->
+						
+						
+						
 					</includes>
 				</configuration>
 			</plugin>
