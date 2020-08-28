@@ -57,13 +57,36 @@ public class SignUpPage {
 	
 	
 	
+	@FindBy (id= "requiredAreacode")
+	public WebElement areaCodePhoneNum;
+	
+	
+	
+	@FindBy (id= "requiredPhoneNumber")
+	public WebElement phoneNum;
 	
 	
 	
 	
+	@FindBy (id= "basicInfoUserName")
+	public WebElement userName;
 	
 	
 	
+	@FindBy (id= "basicInfoEmailAddress")
+	public WebElement email;
+	
+	@FindBy (id= "requiredEmail2")
+	public WebElement confEmail;
+	
+	
+	@FindBy (id= "basicInfoPassword")
+	public WebElement password;
+	
+	
+	requiredEqualTo
+	@FindBy (id= "requiredEqualTo")
+	public WebElement passwordConf;
 	
 	
 }

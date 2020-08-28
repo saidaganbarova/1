@@ -78,15 +78,15 @@ public class LoginPageStepDef {
 
 	
 	
-//	@When("I login with parametrs")
-//	public void iloginwithparametrs() {
-//	   HomePage hp = new HomePage();
-//	   Actions a = new Actions(Driver.getDriver());
-//	   a.moveToElement(hp.loginButton).click().build().perform();
-//	 
-//	   
-//	   BrowserUtilities.waitFor(5);
-//	   }
+	@When("I login with parametrs")
+	public void iloginwithparametrs() {
+	   HomePage hp = new HomePage();
+	   Actions a = new Actions(Driver.getDriver());
+	   a.moveToElement(hp.loginButton).click().build().perform();
+	 
+	   
+	   BrowserUtilities.waitFor(5);
+	   }
 	
 	
 	

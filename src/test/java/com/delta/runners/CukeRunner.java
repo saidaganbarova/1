@@ -18,7 +18,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
         
 
 	
-		tags = "@iuliia",
+		tags = "@Elshan",
 		features = "src/test/resources/com/delta/features",
 		glue = "com/delta/stepDefs",
 		plugin = {"summary", 

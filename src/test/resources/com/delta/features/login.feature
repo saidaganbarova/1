@@ -57,14 +57,25 @@ Feature: login
     	
     	
     	#use of excel file 
-    	@iuliia
+    	
    Scenario: Login with excel
     	Given I am on the homepage
-    #	When I login with parametrs
-    	And Use excel File to enter login info 
+   		And Use excel File to enter login info 
     	Then I logged in 	
 
     	
+  
+  @iuliia
+    Scenario Outline: Title of your scenario outline
+  	Given I am on the homepage
+    When I check for the <value> in step
+    Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |
+  
     	
     	
     
