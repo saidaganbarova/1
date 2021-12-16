@@ -37,7 +37,7 @@ public class AboutDeltaStepDefs {
 	}
 
 	@When("I am on video button")
-	public void iAmOnVideoButton() {
+	public void iAmOnVideoButton() throws InterruptedException {
 		
 		AboutDeltaPage ad = new  AboutDeltaPage();
 		Actions a = new Actions(Driver.getDriver());
@@ -46,6 +46,7 @@ public class AboutDeltaStepDefs {
  		BrowserUtilities.waitFor(3);
  		a.click(ad.play).build().perform();
  		BrowserUtilities.waitFor(2);
+ 		Thread.sleep(2000);
  		
  		
 	}
